@@ -9,17 +9,28 @@ const passport = require ('passport');
 
 //Instance of express;
 const app = express();
+
+//Port number
 const port = 3000;
+
+const users = require('./routes/users');
 
 //Connect to Mongo through mongoose
 mongoose.connect('mongodb://localhost/SolSillas');
-var db = mongoose.connection;
+const db = mongoose.connection;
 
+//MiddleWare
+app.use(cors());
+app.use(bodyParser.json());
+
+app.use('/users', users);
+
+//Get the index
 app.get('/', (req, res) => {
-  res.send("Hello this is a place holder");
+  res.send("INDEX");
 });
 
-
-app.listen(port, => {
+//Start Server
+app.listen(port, () => {
   console.log("Server started on port: " + port);
 });
