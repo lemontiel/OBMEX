@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SaMoSe12/OBMEX.git"
+    "url": "git+https://github.com/lemontiel/OBMEX.git"
   },
   "dependencies":{
     "express":"*",
