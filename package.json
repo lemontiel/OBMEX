@@ -1,0 +1,35 @@
+{
+  "name": "obmex",
+  "version": "1.0.0",
+  "description": "OBMEX Database MEAN APP ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaMoSe12/OBMEX.git"
+  },
+  "dependencies":{
+    "express":"*",
+    "body-parser":"*",
+    "mongoose":"*",
+    "bcryptjs" : "*",
+    "cors" : "*",
+    "jsonwebtoken" : "*",
+    "passport" : "*",
+    "passport-jwt" : "*"
+  },
+  "keywords": [
+    "OBMEX",
+    "MEAN",
+    "SOCIAL",
+    "SERVICE"
+  ],
+  "author": "Luis Enrique Montiel Ayala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lemontiel/OBMEX/issues"
+  },
+  "homepage": "https://github.com/lemontiel/OBMEX#readme"
+}
