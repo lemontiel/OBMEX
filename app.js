@@ -4,7 +4,18 @@ const mongoose = require('mongoose');
 const path = require ('path');
 const cors = require ('cors');
 const passport = require ('passport');
+const config = require('./config/database');
 
+//Connect to Mongo through mongoose
+mongoose.connect(config.database);
+
+mongoose.connection.on('connected', () =>{
+  console.log('Connected to database: ' + config.database);
+});
+
+mongoose.connection.on('error', (err) =>{
+  console.log('Database error ' + err);
+});
 
 
 //Instance of express;
@@ -15,13 +26,11 @@ const port = 3000;
 
 const users = require('./routes/users');
 
-//Connect to Mongo through mongoose
-mongoose.connect('mongodb://localhost/SolSillas');
-const db = mongoose.connection;
-
 //MiddleWare
 app.use(cors());
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', users);
 
