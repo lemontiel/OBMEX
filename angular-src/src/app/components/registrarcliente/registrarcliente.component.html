@@ -2,25 +2,97 @@
 <div class="col-md-7">
   <div class="panel panel-default">
     <div class="panel-heading"><h3 class="strong text-center">Registrar cliente</h3></div>
-      <div class="panel-body">
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="email">Email:</label>
-            <div class="col-sm-10">
-              <input type="email" class="form-control" id="email" placeholder="Enter email">
-            </div>
+    <div class="panel-body">
+      <form class="form-horizontal">
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="name">Nombre:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre Institucion">
           </div>
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="pwd">Password:</label>
-            <div class="col-sm-10">
-              <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-            </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Email:</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" placeholder="Email">
           </div>
-          <div class="form-group">
-            <div class="col-sm-offset-4 col-sm-10 centered">
-                <button type="submit" class="btn btn-default">Submit</button>
-            </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="name">Contacto:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="nombreContacto" placeholder="Nombre Contacto">
           </div>
-        </form>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="phone">Telefono:</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="telefono" placeholder="N&uacute;mero Telefonico">
+          </div>
+          <div class="col-sm-2"><a class="btn btn-success"><span class="glyphicon glyphicon-plus-sign plusIcon"></span></a></div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="select">Curso:</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="Curso">
+              <option disabled selected>¿Cuenta con el Curso de Ensamble y Distribuci&oacute;n?</option>
+              <option>Si</option>
+              <option>No</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="select">Estado:</label>
+          <div class="col-sm-10">
+           <select class="form-control" id="Estado">
+            <option disabled selected>Selecciona Estado de la Rep&uacute;blica</option>
+            <option value="DIF">Distrito Federal</option>
+            <option value="AGS">Aguascalientes</option>
+            <option value="BCN">Baja California</option>
+            <option value="BCS">Baja California Sur</option>
+            <option value="CAM">Campeche</option>
+            <option value="CHP">Chiapas</option>
+            <option value="CHI">Chihuahua</option>
+            <option value="COA">Coahuila</option>
+            <option value="COL">Colima</option>
+            <option value="DUR">Durango</option>
+            <option value="GTO">Guanajuato</option>
+            <option value="GRO">Guerrero</option>
+            <option value="HGO">Hidalgo</option>
+            <option value="JAL">Jalisco</option>
+            <option value="MEX">M&eacute;xico</option>
+            <option value="MIC">Michoac&aacute;n</option>
+            <option value="MOR">Morelos</option>
+            <option value="NAY">Nayarit</option>
+            <option value="NLE">Nuevo Le&oacute;n</option>
+            <option value="OAX">Oaxaca</option>
+            <option value="PUE">Puebla</option>
+            <option value="QRO">Quer&eacute;taro</option>
+            <option value="ROO">Quintana Roo</option>
+            <option value="SLP">San Luis Potos&iacute;</option>
+            <option value="SIN">Sinaloa</option>
+            <option value="SON">Sonora</option>
+            <option value="TAB">Tabasco</option>
+            <option value="TAM">Tamaulipas</option>
+            <option value="TLX">Tlaxcala</option>
+            <option value="VER">Veracruz</option>
+            <option value="YUC">Yucat&aacute;n</option>
+            <option value="ZAC">Zacatecas</option>
+
+          </select>
+        </div>
       </div>
-    </div>
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-10 centered">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

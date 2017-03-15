@@ -24,8 +24,9 @@ const app = express();
 //Port number
 const port = 3000;
 
-//Users directory call
+//directories call
 const users = require('./routes/users');
+const clients = require('./routes/clients');
 
 //MiddleWare
 app.use(cors());
@@ -39,6 +40,7 @@ require('./config/passport')(passport);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', users);
+app.use('/clients', clients);
 
 //Get the index
 app.get('/', (req, res) => {
