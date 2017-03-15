@@ -40,7 +40,8 @@ module.exports.getClientByName = function (name, callback){
   Client.findOne(query, callback);
 }
 
-module.exports.addClient = function(err, newClient, callback){
-	if(err) console.log(err);
+
+module.exports.addClient = function(newClient, callback){
 	newClient.save(callback);
 }
+

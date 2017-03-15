@@ -15,15 +15,15 @@ router.post('/newClient', (req, res, next) => {
 		curse : req.body.curse
 	});
 
-	Client.addClient(newClient, (err, client) =>{
-    if(err){
-      res.json({success : false, msg : "Fallo al agregar cliente"});
-    }
-    else {
-      res.json({success : true, msg : "Cliente agregado"});
-    }
-  });
 
+	Client.addClient(newClient, (err, client) => {
+	    if(err){
+	      res.json({success : false, msg : "Fallo al agregar cliente"});
+	    }
+	    else {
+	      res.json({success : true, msg : "Cliente agregado"});
+	    }
+	});		
 });
 
 //Search
