@@ -16,6 +16,7 @@ import { ClientesComponent } from './components/clientes/clientes.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { RegistrarclienteComponent } from './components/registrarcliente/registrarcliente.component';
 
+import {AuthService} from './services/auth.service';
 
 const appRoutes: Routes =  [
   {path: '', component: HomeComponent},
@@ -49,7 +50,7 @@ const appRoutes: Routes =  [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

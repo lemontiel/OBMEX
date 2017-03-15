@@ -3,41 +3,41 @@
   <div class="panel panel-default">
     <div class="panel-heading"><h3 class="strong text-center">Registrar cliente</h3></div>
     <div class="panel-body">
-      <form class="form-horizontal">
+      <form (submit) = "registerSubmit()" class="form-horizontal">
 
         <div class="form-group">
-          <label class="control-label col-sm-2" for="name">Nombre:</label>
+          <label class="control-label col-sm-2">Nombre:</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre Institucion">
+            <input type="text" class="form-control"  [(ngModel)] = "name" name="name" placeholder="Nombre Institucion">
           </div>
         </div>
 
         <div class="form-group">
-          <label class="control-label col-sm-2" for="email">Email:</label>
+          <label class="control-label col-sm-2">Email:</label>
           <div class="col-sm-10">
-            <input type="email" class="form-control" id="email" placeholder="Email">
+            <input type="email" class="form-control" [(ngModel)] = "email" name="email" placeholder="Email">
           </div>
         </div>
 
         <div class="form-group">
-          <label class="control-label col-sm-2" for="name">Contacto:</label>
+          <label class="control-label col-sm-2">Contacto:</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="nombreContacto" placeholder="Nombre Contacto">
+            <input type="text" class="form-control" [(ngModel)] = "contactName" name="contactName"  placeholder="Nombre Contacto">
           </div>
         </div>
 
         <div class="form-group">
-          <label class="control-label col-sm-2" for="phone">Telefono:</label>
+          <label class="control-label col-sm-2">Telefono:</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="telefono" placeholder="N&uacute;mero Telefonico">
+            <input type="text" class="form-control" [(ngModel)] = "phoneNumber" name="phoneNumber" placeholder="N&uacute;mero Telefonico">
           </div>
           <div class="col-sm-2"><a class="btn btn-success"><span class="glyphicon glyphicon-plus-sign plusIcon"></span></a></div>
         </div>
 
         <div class="form-group">
-          <label class="control-label col-sm-2" for="select">Curso:</label>
+          <label class="control-label col-sm-2">Curso:</label>
           <div class="col-sm-10">
-            <select class="form-control" id="Curso">
+            <select class="form-control" [(ngModel)] = "curse" name="curse">
               <option disabled selected>¿Cuenta con el Curso de Ensamble y Distribuci&oacute;n?</option>
               <option>Si</option>
               <option>No</option>
@@ -46,9 +46,9 @@
         </div>
 
         <div class="form-group">
-          <label class="control-label col-sm-2" for="select">Estado:</label>
+          <label class="control-label col-sm-2">Estado:</label>
           <div class="col-sm-10">
-           <select class="form-control" id="Estado">
+           <select class="form-control" [(ngModel)] = "state" name="state" >
             <option disabled selected>Selecciona Estado de la Rep&uacute;blica</option>
             <option value="DIF">Distrito Federal</option>
             <option value="AGS">Aguascalientes</option>

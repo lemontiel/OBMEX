@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-registrarcliente',
@@ -7,9 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarclienteComponent implements OnInit {
 
-  constructor() { }
+  name : string;
+  email : string;
+  contactName : string;
+  phoneNumber : string;
+  state : string;
+  curse : string;
+
+  constructor(private authService : AuthService,
+              private router : Router) { }
 
   ngOnInit() {
   }
+  registerSubmit(){
 
+    const client = {
+      name : this.name,
+      email : this.email,
+      contactName : this.contactName,
+      phoneNumber : this.phoneNumber,
+      state : this.state,
+      curse : this.curse
+    }
+
+    this.authService.addClient(client).subscribe(data =>{
+      if(data.success){
+        console.log("Client Added");
+        this.router.navigate(['/clients']);
+      }
+      else{
+        console.log("Something broke :(");
+        this.router.navigate(['/registrarcliente']);
+      }
+    });
+  }
 }
