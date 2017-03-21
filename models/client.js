@@ -12,7 +12,7 @@ const clientSchema = mongoose.Schema({
 		required : false
 	},
 	contactName : {
-		type : String, 
+		type : String,
 		required : true
 	},
 	phoneNumber : {
@@ -24,7 +24,7 @@ const clientSchema = mongoose.Schema({
 		required : true
 	},
 	state : {
-		type : String, 
+		type : String,
 		required : true
 	}
 });
@@ -39,9 +39,11 @@ module.exports.getClientByName = function (name, callback){
   const query = {name : name}
   Client.findOne(query, callback);
 }
+module.exports.getClients = function(callback){
+	Client.find(callback);
+}
 
 
 module.exports.addClient = function(newClient, callback){
 	newClient.save(callback);
 }
-

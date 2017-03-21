@@ -23,18 +23,19 @@ router.post('/newClient', (req, res, next) => {
 	    else {
 	      res.json({success : true, msg : "Cliente agregado"});
 	    }
-	});		
+	});
 });
 
 //Search
-router.post('/searchClient', (req, res, next) =>{
-	Client.getClientByName(name, (client)=>{
+router.get('/searchClient', (req, res, next) =>{
+	Client.getClientByName(name, (err,client)=>{
+		if(err) console.log(err);
 		if(!client){
 			return res.json({success : false, msg : "Cliente no encontrado"});
 		}
 		else{
 			return res.json({
-				success : true, 
+				success : true,
 				client : {
 					name : client.name,
 					email : client.email,
@@ -47,5 +48,18 @@ router.post('/searchClient', (req, res, next) =>{
 		}
 	});
 });
+
+router.get('/getClients', (req, res, next) =>{
+	Client.getClients((err, client)=>{
+		if(err) console.log(err);
+		else{
+			return res.json({
+				success: true,
+				client
+			});
+		}
+		});
+	});
+
 
 module.exports =router;
