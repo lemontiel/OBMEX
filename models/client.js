@@ -1,7 +1,8 @@
 const mongoose = require ('mongoose');
+const autoIncrement = require('@ineentho/mongodb-autoincrement');
 const config = require ('../config/database');
 
-//Clients Scheema
+//Clients Schema
 const clientSchema = mongoose.Schema({
 	name : {
 		type : String,
@@ -9,25 +10,67 @@ const clientSchema = mongoose.Schema({
 	},
 	email : {
 		type : String,
-		required : false
-	},
-	contactName : {
-		type : String,
 		required : true
 	},
-	phoneNumber : {
+	rfc : {
 		type : String,
 		required : false
 	},
-	curse : {
-		type : String,
-		required : true
+	phoneNumbers : [{
+		_id : false,
+		phoneType : {
+			type : String,
+			required : false
+		},
+		number : {
+			type : String,
+			required : false
+		},
+		extentions : [{
+			_id : false,
+			extentionType:{
+				type : String,
+				required : false
+			},
+			extentionNumber:{
+				type : String,
+				required : false
+			}
+
+		}]
+	}],
+	address : {
+		state : {
+			type : String,
+			required : true
+		},
+		city : {
+			type : String,
+			required : false
+		},
+		street : {
+			type : String,
+			required : false
+		},
+		outsideNumber : {
+			type : String,
+			required : false
+		},
+		insideNumber : {
+			type : String,
+			required : false
+		}
 	},
-	state : {
-		type : String,
-		required : true
+	orders : [{
+		_id : false,
+		orderID :{
+			type : Number,
+			required : false
 	}
+	}]
 });
+
+clientSchema.plugin(autoIncrement.mongoosePlugin);
 
 const Client = module.exports = mongoose.model('Client', clientSchema);
 
