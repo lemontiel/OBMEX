@@ -14,7 +14,6 @@
     "express":"*",
     "body-parser":"*",
     "mongoose":"*",
-    "@ineentho/mongodb-autoincrement" : "*",
     "bcryptjs" : "*",
     "cors" : "*",
     "jsonwebtoken" : "*",

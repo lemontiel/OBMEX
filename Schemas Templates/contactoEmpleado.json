@@ -1,0 +1,33 @@
+{
+  "ID": 0,
+  "ID_Inst": 0,
+  "Nombre": {
+    "Nombre": "Luis Enrique",
+    "Apellido Paterno": "Montiel",
+    "Apellido Materno": "Ayala"
+  },
+  "Cargo": "CEO",
+  "Telefonos": [
+    {
+      "tipo": "Oficina",
+      "numero": "9177-4400",
+      "extencion": 54
+    },
+    {
+      "tipo": "Celular",
+      "numero": "0445515102385"
+    }
+  ],
+  "e-mail": "LMontiel@lemaempreza1.com",
+  "Cursos": [
+    {
+      "ID_Curso": 0,
+      "Cursado": false
+    }
+  ],
+  "Pedidos" : [
+      {
+        "ID_Pëdido" : 0
+      }
+    ]
+}

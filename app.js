@@ -27,6 +27,7 @@ const port = 3000;
 //directories call
 const users = require('./routes/users');
 const clients = require('./routes/clients');
+const inventories = require('./routes/inventories')
 
 //MiddleWare
 app.use(cors());
@@ -41,6 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', users);
 app.use('/clients', clients);
+app.use('/inventories', inventories);
 
 //Get the index
 app.get('/', (req, res) => {

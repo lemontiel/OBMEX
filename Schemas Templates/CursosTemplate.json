@@ -1,0 +1,20 @@
+{
+  "ID": 0,
+  "Direccion": {
+    "Calle": "Corretaderas",
+    "Numero Exterior": "103",
+    "Numero Interior": "2",
+    "Colonia": "Las Corretaderas",
+    "Municipio": "El Ojo del aguila",
+    "C.P.": 19232
+  },
+  "Fecha": "12/03/18",
+  "Hora": "18:20",
+  "Costo": 1200,
+  "Instructor": "Opcional",
+  "Participantes" : [
+      {
+        "ID":0
+      }
+    ]
+}

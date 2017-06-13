@@ -1,0 +1,16 @@
+{
+  "Fecha": "12/23/12",
+  "ID_Inst": 0,
+  "ID_Cont": 0,
+  "Tipo de silla de ruedas": [
+    {
+      "ID_Silla": 0,
+      "Cantidad": 0
+    },
+    {
+      "ID_Silla": 1,
+      "Cantiadad": 0
+    }
+  ],
+  "Monto total": "0"
+}

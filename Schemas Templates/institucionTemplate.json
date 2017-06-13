@@ -1,0 +1,44 @@
+{
+  "ID": 0,
+  "Nombre": "LemaEmpresa1",
+  "Email": "ceo@lemainc.com",
+  "RFC": "ELRFCDELEMAEMPRESA1",
+  "Telefonos": [
+    {
+      "tipo": "Departamentos",
+      "numero": "9177-4400",
+      "extenciones": [
+        {
+          "nombre": "Direccion",
+          "numero": 192
+        },
+        {
+          "nombre": "IT",
+          "numero": 103
+        },
+        {
+          "nombre": "Recursos Humanos",
+          "numero": 201
+        }
+      ]
+    },
+    {
+      "tipo": "Lada nacional sin costo",
+      "numero": "01 800 627-7615",
+      "extenciones": []
+    }
+  ],
+  "Direccion": {
+    "Calle": "Corretaderas",
+    "Numero Exterior": "103",
+    "Numero Interior": "2",
+    "Colonia": "Las Corretaderas",
+    "Municipio": "El Ojo del aguila",
+    "C.P.": 19232
+  },
+  "Pedidos" : [
+      {
+        "ID_Pëdido" : 0
+      }
+    ]
+}

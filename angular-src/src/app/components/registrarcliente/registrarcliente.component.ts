@@ -36,7 +36,7 @@ export class RegistrarclienteComponent implements OnInit {
     this.authService.addClient(client).subscribe(data =>{
       if(data.success){
         console.log("Client Added");
-        this.router.navigate(['/clients']);
+        this.router.navigate(['/clientes']);
       }
       else{
         console.log("Something broke :(");

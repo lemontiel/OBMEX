@@ -50,7 +50,7 @@ const appRoutes: Routes =  [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [AuthService ],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
